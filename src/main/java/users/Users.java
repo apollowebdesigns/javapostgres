@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
-public class Test implements Serializable {
+public class Users implements Serializable {
 
     private static final long serialVersionUID = -3009157732242241606L;
     @Id
@@ -15,19 +15,19 @@ public class Test implements Serializable {
     @Column(name = "username")
     private String username;
 
-    protected Test() {
+    protected Users() {
     }
 
     public String getUsername() {
         return username;
     }
 
-    public Test(String username) {
+    public Users(String username) {
         this.username = username;
     }
 
-//    @Override
-//    public String toString() {
-//        return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, testprop);
-//    }
+    @Override
+    public String toString() {
+        return String.format("Customer[id=%d, username='%s']", id, username);
+    }
 }
